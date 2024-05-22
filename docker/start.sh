@@ -21,7 +21,7 @@ fi
 # binding volumes are permission/ownership root, change it to www-data
 # chown -R www-data:www-data /var/www/drupal/
 # settings is special, it should be set to ready-only for all
-sudo chmod 444 /var/www/drupal/html/web/sites/dfault/settings.php
+sudo chmod 444 /var/www/drupal/html/web/sites/default/settings.php
 # to develop custom modules/themes they need group set to rw
 sudo chmod -R 775 /var/www/drupal/html/web/modules/custom/
 sudo chmod -R 775 /var/www/drupal/html/web/themes/custom/
