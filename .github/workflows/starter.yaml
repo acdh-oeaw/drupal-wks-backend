@@ -98,7 +98,8 @@ jobs:
 #      PUBLIC_URL: ${{ needs.generate_workflow_vars.outputs.PUBLIC_URL }}
 #      submodules: ${{ needs.setup_workflow_env.outputs.submodules }}
   _3:
-    needs: [setup_workflow_env, generate_workflow_vars, _1, _2]
+#    needs: [setup_workflow_env, generate_workflow_vars, _1, _2]
+    needs: [setup_workflow_env, generate_workflow_vars, _1]
     uses: acdh-oeaw/gl-autodevops-minimal-port/.github/workflows/deploy.yml@main
     secrets: inherit
 # if you run this outside of acdh-oeaw yo uneed to specify every secret you want to pass by name
