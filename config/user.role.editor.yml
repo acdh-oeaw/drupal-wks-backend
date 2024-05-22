@@ -1,0 +1,65 @@
+uuid: 7db44392-bcdc-4b3d-bf50-81e820eb62e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.article
+    - node.type.page
+    - node.type.recipe
+    - taxonomy.vocabulary.recipe_category
+    - taxonomy.vocabulary.tags
+    - workflows.workflow.editorial
+  module:
+    - content_moderation
+    - contextual
+    - file
+    - node
+    - path
+    - system
+    - taxonomy
+    - toolbar
+_core:
+  default_config_hash: 5Nn7qN2pQIJdOnZ2P8bjYXYG9OMRaLdJH1iU8syxxpE
+id: editor
+label: Editor
+weight: 4
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access files overview'
+  - 'access toolbar'
+  - 'cancel account'
+  - 'change own username'
+  - 'create terms in recipe_category'
+  - 'create terms in tags'
+  - 'create url aliases'
+  - 'delete all revisions'
+  - 'delete any article content'
+  - 'delete any page content'
+  - 'delete any recipe content'
+  - 'delete article revisions'
+  - 'delete own files'
+  - 'delete page revisions'
+  - 'delete recipe revisions'
+  - 'delete terms in recipe_category'
+  - 'delete terms in tags'
+  - 'edit any article content'
+  - 'edit any page content'
+  - 'edit any recipe content'
+  - 'edit terms in recipe_category'
+  - 'edit terms in tags'
+  - 'revert all revisions'
+  - 'revert article revisions'
+  - 'revert page revisions'
+  - 'revert recipe revisions'
+  - 'use editorial transition archive'
+  - 'use editorial transition archived_published'
+  - 'use editorial transition publish'
+  - 'view all revisions'
+  - 'view any unpublished content'
+  - 'view article revisions'
+  - 'view latest version'
+  - 'view page revisions'
+  - 'view recipe revisions'
+  - 'view the administration theme'

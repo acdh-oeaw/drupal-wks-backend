@@ -1,0 +1,23 @@
+version: '3.7'
+
+services:
+  drupal:
+    container_name: drupal-web-k8sdeploy
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    ports:
+      - "${WEBPORT}:80"
+    environment:
+      WEBPORT: ${WEBPORT}
+      DBNAME: ${DBNAME}
+      DBUSER: ${DBUSER}
+      DBPSWD: ${DBPSWD}
+      DBPREFIX: ${DBPREFIX}
+      DBHOST: ${DBHOST}
+      DBPORT: ${DBPORT}
+    volumes:
+      - files:/var/www/drupal/html/web/sites/default/files/
+
+volumes:
+  files:
