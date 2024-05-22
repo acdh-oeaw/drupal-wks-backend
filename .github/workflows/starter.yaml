@@ -81,25 +81,27 @@ jobs:
       PUBLIC_URL: ${{ needs.generate_workflow_vars.outputs.PUBLIC_URL }}
       fetch-depth: ${{ fromJson(needs.setup_workflow_env.outputs.fetch-depth) }}
       submodules: ${{ needs.setup_workflow_env.outputs.submodules }}
-  _2:
-    needs: [setup_workflow_env, generate_workflow_vars]
-    uses:  acdh-oeaw/gl-autodevops-minimal-port/.github/workflows/herokuish-tests-db-url.yaml@main
-    secrets: inherit
+      context: drupal-docker
+      file: docker/Dockerfile
+#  _2:
+#    needs: [setup_workflow_env, generate_workflow_vars]
+#    uses:  acdh-oeaw/gl-autodevops-minimal-port/.github/workflows/herokuish-tests-db-url.yaml@main
+#    secrets: inherit
 # if you run this outside of acdh-oeaw yo uneed to specify every secret you want to pass by name
-    with:
-      environment: ${{ needs.setup_workflow_env.outputs.environment}}
-      registry_root: ${{ needs.setup_workflow_env.outputs.registry_root }}
-      image_name: ${{ needs.setup_workflow_env.outputs.image_name }}
-      default_port: ${{ needs.setup_workflow_env.outputs.default_port }}
-      fetch-depth: ${{ fromJson(needs.setup_workflow_env.outputs.fetch-depth) }}
-      herokuish_base_image: ${{ needs.setup_workflow_env.outputs.herokuish_base_image }}
-      POSTGRES_ENABLED: ${{ needs.setup_workflow_env.outputs.POSTGRES_ENABLED }}
-      PUBLIC_URL: ${{ needs.generate_workflow_vars.outputs.PUBLIC_URL }}
-      submodules: ${{ needs.setup_workflow_env.outputs.submodules }}
-  _3:
-    needs: [setup_workflow_env, generate_workflow_vars, _1, _2]
-    uses: acdh-oeaw/gl-autodevops-minimal-port/.github/workflows/deploy.yml@main
-    secrets: inherit
+#    with:
+#      environment: ${{ needs.setup_workflow_env.outputs.environment}}
+#      registry_root: ${{ needs.setup_workflow_env.outputs.registry_root }}
+#      image_name: ${{ needs.setup_workflow_env.outputs.image_name }}
+#      default_port: ${{ needs.setup_workflow_env.outputs.default_port }}
+#      fetch-depth: ${{ fromJson(needs.setup_workflow_env.outputs.fetch-depth) }}
+#      herokuish_base_image: ${{ needs.setup_workflow_env.outputs.herokuish_base_image }}
+#      POSTGRES_ENABLED: ${{ needs.setup_workflow_env.outputs.POSTGRES_ENABLED }}
+#      PUBLIC_URL: ${{ needs.generate_workflow_vars.outputs.PUBLIC_URL }}
+#      submodules: ${{ needs.setup_workflow_env.outputs.submodules }}
+#  _3:
+#    needs: [setup_workflow_env, generate_workflow_vars, _1, _2]
+#    uses: acdh-oeaw/gl-autodevops-minimal-port/.github/workflows/deploy.yml@main
+#    secrets: inherit
 # if you run this outside of acdh-oeaw yo uneed to specify every secret you want to pass by name
 #      KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}
 #      KUBE_INGRESS_BASE_DOMAIN: ${{ secrets.KUBE_INGRESS_BASE_DOMAIN }}
@@ -107,14 +109,14 @@ jobs:
 #      POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
 #      POSTGRES_DB: ${{ secrets.POSTGRES_DB }}
 #      K8S_SECRET_A_VAR_NAME: ${{  }}
-    with:
-      environment: ${{ needs.setup_workflow_env.outputs.environment}}
-      fetch-depth: ${{ fromJson(needs.setup_workflow_env.outputs.fetch-depth) }}
-      DOCKER_TAG: ${{ needs.setup_workflow_env.outputs.registry_root }}${{ needs.setup_workflow_env.outputs.image_name }}
-      APP_NAME: ${{ needs.setup_workflow_env.outputs.APP_NAME }}-${{ needs.setup_workflow_env.outputs.environment_short }}
-      APP_ROOT: ${{ needs.setup_workflow_env.outputs.APP_ROOT }}
-      SERVICE_ID: ${{ needs.setup_workflow_env.outputs.SERVICE_ID }}
-      PUBLIC_URL: ${{ needs.generate_workflow_vars.outputs.PUBLIC_URL }}
-      POSTGRES_ENABLED: ${{ needs.setup_workflow_env.outputs.POSTGRES_ENABLED == 'true'}}
-      default_port: "${{ needs.setup_workflow_env.outputs.default_port}}"
-      submodules: ${{ needs.setup_workflow_env.outputs.submodules }}
+#    with:
+#      environment: ${{ needs.setup_workflow_env.outputs.environment}}
+#      fetch-depth: ${{ fromJson(needs.setup_workflow_env.outputs.fetch-depth) }}
+#      DOCKER_TAG: ${{ needs.setup_workflow_env.outputs.registry_root }}${{ needs.setup_workflow_env.outputs.image_name }}
+#      APP_NAME: ${{ needs.setup_workflow_env.outputs.APP_NAME }}-${{ needs.setup_workflow_env.outputs.environment_short }}
+#      APP_ROOT: ${{ needs.setup_workflow_env.outputs.APP_ROOT }}
+#      SERVICE_ID: ${{ needs.setup_workflow_env.outputs.SERVICE_ID }}
+#      PUBLIC_URL: ${{ needs.generate_workflow_vars.outputs.PUBLIC_URL }}
+#      POSTGRES_ENABLED: ${{ needs.setup_workflow_env.outputs.POSTGRES_ENABLED == 'true'}}
+#      default_port: "${{ needs.setup_workflow_env.outputs.default_port}}"
+#      submodules: ${{ needs.setup_workflow_env.outputs.submodules }}
