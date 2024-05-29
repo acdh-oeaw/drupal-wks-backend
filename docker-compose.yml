@@ -7,7 +7,7 @@ services:
       context: .
       dockerfile: docker/Dockerfile
     ports:
-      - "${WEBPORT}:80"
+      - "${WEBPORT}:5000"
     environment:
       WEBPORT: ${WEBPORT}
       DBNAME: ${DBNAME}

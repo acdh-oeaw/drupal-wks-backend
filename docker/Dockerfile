@@ -88,5 +88,5 @@ COPY ./docker/apache2.conf /etc/apache2/sites-enabled/000-default.conf
 
 CMD ["/var/www/drupal/root/start.sh"]
 
-EXPOSE 80
+EXPOSE 5000
 
