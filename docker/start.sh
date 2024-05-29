@@ -5,7 +5,9 @@ then
   echo "settings.php found, using it"
 else
   echo "no settings.php found, create a new one"
-  cp /var/www/drupal/html/web/sites/default/default.settings.php /var/www/drupal/html/web/sites/default/settings.php
+  # cp /var/www/drupal/html/web/sites/default/default.settings.php /var/www/drupal/html/web/sites/default/settings.php
+  mkdir /var/www/drupal/settings
+  cp /var/www/drupal/html/web/sites/default/default.settings.php /var/www/drupal/settings/settings.php
   sudo sed -i /var/www/drupal/root/drupal_settings.php \
     -e "s/DBNAME/$DBNAME/g" \
     -e "s/DBUSER/$DBUSER/g" \
@@ -13,7 +15,8 @@ else
     -e "s/DBPREFIX/$DBPREFIX/g" \
     -e "s/DBHOST/$DBHOST/g" \
     -e "s/DBPORT/$DBPORT/g"
-  sudo cat /var/www/drupal/root/drupal_settings.php >> /var/www/drupal/html/web/sites/default/settings.php
+  # sudo cat /var/www/drupal/root/drupal_settings.php >> /var/www/drupal/html/web/sites/default/settings.php
+  sudo cat /var/www/drupal/root/drupal_settings.php >> /var/www/drupal/settings/settings.php
   # chown 1000:1000 /var/www/drupal/html/web/sites/default/settings.php
   # mv /var/www/drupal/html/web/sites/default/settings.php /var/www/drupal/settings/settings.php
 fi
@@ -21,7 +24,8 @@ fi
 # binding volumes are permission/ownership root, change it to www-data
 # chown -R www-data:www-data /var/www/drupal/
 # settings is special, it should be set to ready-only for all
-sudo chmod 444 /var/www/drupal/html/web/sites/default/settings.php
+# sudo chmod 444 /var/www/drupal/html/web/sites/default/settings.php
+sudo chmod 444 /var/www/drupal/settings/settings.php
 # to develop custom modules/themes they need group set to rw
 sudo chmod -R 775 /var/www/drupal/html/web/modules/custom/
 sudo chmod -R 775 /var/www/drupal/html/web/themes/custom/
