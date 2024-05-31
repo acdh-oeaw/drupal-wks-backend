@@ -7,7 +7,7 @@ $settings['config_sync_directory'] = '/var/www/drupal/config';
 /**
  * database settings
  */
-$databases['default']['default'] = array (
+/*$databases['default']['default'] = array (
   'database' => 'DBNAME',
   'username' => 'DBUSER',
   'password' => 'DBPSWD',
@@ -19,5 +19,5 @@ $databases['default']['default'] = array (
   'init_commands' => [
     'isolation_level' => 'SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED',
   ],
-);
+);*/
 
