@@ -1,0 +1,10 @@
+uuid: 80757728-313a-4940-9080-9fade4893104
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.restoutput
+label: restoutput
+targetEntityType: node
+cache: true

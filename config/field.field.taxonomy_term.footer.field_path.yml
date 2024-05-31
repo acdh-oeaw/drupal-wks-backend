@@ -1,0 +1,19 @@
+uuid: 0bd1bc62-7d63-46bc-8bb5-e25bd19ac8e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_path
+    - taxonomy.vocabulary.footer
+id: taxonomy_term.footer.field_path
+field_name: field_path
+entity_type: taxonomy_term
+bundle: footer
+label: path
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

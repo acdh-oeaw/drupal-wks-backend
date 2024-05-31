@@ -1,0 +1,21 @@
+uuid: 21dc3000-a0b6-4e17-b16f-f909782dd5d0
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+  enforced:
+    module:
+      - person
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Person
+type: person
+description: 'Content type that can be used to provide information on <em>Persons</em>'
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: true

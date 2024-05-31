@@ -1,0 +1,15 @@
+uuid: 0cfd51f5-4bf5-48e3-b786-53ec7a349d8c
+langcode: en
+status: true
+dependencies: {  }
+name: banner
+label: 'Banner (380 x 1440)'
+effects:
+  90fc2d12-20b9-4dc3-bb53-f56d3c80e4d9:
+    uuid: 90fc2d12-20b9-4dc3-bb53-f56d3c80e4d9
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1440
+      height: 380
+      anchor: center-center

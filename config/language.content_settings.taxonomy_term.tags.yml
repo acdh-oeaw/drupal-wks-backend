@@ -1,4 +1,4 @@
-uuid: ee6b4041-e910-4330-aa2f-9e927f999abd
+uuid: 0ca31463-ba2e-45e0-8832-eb48c8fa2b8f
 langcode: en
 status: true
 dependencies:
@@ -8,11 +8,9 @@ dependencies:
     - content_translation
 third_party_settings:
   content_translation:
-    enabled: true
-_core:
-  default_config_hash: nm4_dGToP6SyYBVO8GcLc0q_Q08WuyD98A8rvZVpoSw
+    enabled: false
 id: taxonomy_term.tags
 target_entity_type_id: taxonomy_term
 target_bundle: tags
 default_langcode: site_default
-language_alterable: true
+language_alterable: false

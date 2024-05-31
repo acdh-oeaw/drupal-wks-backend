@@ -1,0 +1,28 @@
+uuid: 4eb16e8c-bb38-46b2-be40-d2148cfb2829
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: alias_by_name
+label: 'alias by name'
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  d7cb9a5e-0545-493b-814d-e7a9b51ec389:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: d7cb9a5e-0545-493b-814d-e7a9b51ec389
+    context_mapping:
+      node: node
+    bundles:
+      event: event
+      institution: institution
+      person: person
+      project: project
+      standard_page: standard_page
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

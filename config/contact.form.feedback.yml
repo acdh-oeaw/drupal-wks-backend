@@ -1,4 +1,4 @@
-uuid: 72acaa24-ad6b-48a0-8de3-392975fa2fc3
+uuid: ecc8b522-fb40-45fa-9cbb-faddee25c54c
 langcode: en
 status: true
 dependencies: {  }
@@ -7,7 +7,7 @@ _core:
 id: feedback
 label: 'Website feedback'
 recipients:
-  - klaus.illmayer@oeaw.ac.at
+  - christoph.hoffmann@oeaw.ac.at
 reply: ''
 weight: 0
 message: 'Your message has been sent.'

@@ -1,0 +1,23 @@
+uuid: 7c443ba5-c4f4-473e-85e0-7641518ae313
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.publication
+  module:
+    - text
+id: node.publication.body
+field_name: body
+entity_type: node
+bundle: publication
+label: Publication
+description: 'Content type that can be used to provide information on Publication'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

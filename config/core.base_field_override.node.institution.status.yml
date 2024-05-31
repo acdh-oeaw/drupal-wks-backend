@@ -1,0 +1,22 @@
+uuid: dee60051-61f2-4d5d-b68f-daba812ab59f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.institution
+id: node.institution.status
+field_name: status
+entity_type: node
+bundle: institution
+label: 'Publishing status'
+description: 'A boolean indicating the published state.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

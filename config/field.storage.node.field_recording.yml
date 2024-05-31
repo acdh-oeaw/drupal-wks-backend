@@ -1,0 +1,19 @@
+uuid: 4ff672e7-b8ca-42fe-aace-b8de29f05c55
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_recording
+field_name: field_recording
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 5
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

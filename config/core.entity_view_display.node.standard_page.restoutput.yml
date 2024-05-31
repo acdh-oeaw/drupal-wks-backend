@@ -1,0 +1,78 @@
+uuid: 5a716d60-800d-4ff7-ba10-2626b0f54564
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.restoutput
+    - field.field.node.standard_page.body
+    - field.field.node.standard_page.field_attachments
+    - field.field.node.standard_page.field_cover_image
+    - field.field.node.standard_page.field_icon
+    - field.field.node.standard_page.field_image
+    - field.field.node.standard_page.field_menu
+    - field.field.node.standard_page.field_related_pages
+    - node.type.standard_page
+  module:
+    - file
+    - image
+    - text
+    - user
+id: node.standard_page.restoutput
+targetEntityType: node
+bundle: standard_page
+mode: restoutput
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_attachments:
+    type: file_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_cover_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_related_pages:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_icon: true
+  field_menu: true
+  langcode: true
+  search_api_excerpt: true

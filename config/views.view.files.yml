@@ -1,4 +1,4 @@
-uuid: 869f2839-51de-4d03-a531-05a7138940a3
+uuid: 1c792af9-2914-48e7-97e7-02c7b09c7736
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,7 @@ dependencies:
     - file
     - user
 _core:
-  default_config_hash: gLmoA0yjvlXfMRp9ihOhRKSSQQlbdLdvpDkbVwkYPrg
+  default_config_hash: rRWxAX-IQkJ5viACQRovRkC784EyCl9493GU_G23n2Q
 id: files
 label: Files
 module: file
@@ -335,15 +335,6 @@ display:
             date_format: medium
             custom_date_format: ''
             timezone: ''
-            tooltip:
-              date_format: ''
-              custom_date_format: ''
-            time_diff:
-              enabled: false
-              future_format: '@interval hence'
-              past_format: '@interval ago'
-              granularity: 2
-              refresh: 60
         changed:
           id: changed
           table: file_managed
@@ -400,15 +391,6 @@ display:
             date_format: medium
             custom_date_format: ''
             timezone: ''
-            tooltip:
-              date_format: ''
-              custom_date_format: ''
-            time_diff:
-              enabled: false
-              future_format: '@interval hence'
-              past_format: '@interval ago'
-              granularity: 2
-              refresh: 60
         count:
           id: count
           table: file_usage
@@ -542,6 +524,7 @@ display:
               authenticated: authenticated
               anonymous: '0'
               administrator: '0'
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -584,6 +567,7 @@ display:
               authenticated: authenticated
               anonymous: '0'
               administrator: '0'
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''

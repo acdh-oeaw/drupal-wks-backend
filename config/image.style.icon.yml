@@ -1,0 +1,15 @@
+uuid: 738b3126-732c-4241-980f-76da9b6f11d1
+langcode: en
+status: true
+dependencies: {  }
+name: icon
+label: 'Icon (57 x 57)'
+effects:
+  5e0ef140-764e-480e-ba2b-1ad4f13ed23b:
+    uuid: 5e0ef140-764e-480e-ba2b-1ad4f13ed23b
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 57
+      height: 57
+      anchor: center-center

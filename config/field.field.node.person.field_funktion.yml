@@ -1,0 +1,21 @@
+uuid: ecdbcbca-8c5e-48cf-a7fd-0d7f9a66790d
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_funktion
+    - node.type.person
+  module:
+    - options
+id: node.person.field_funktion
+field_name: field_funktion
+entity_type: node
+bundle: person
+label: Funktion
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

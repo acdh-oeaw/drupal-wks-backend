@@ -1,0 +1,27 @@
+uuid: 769686a1-01e2-4b2a-9355-a046793edf65
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_attachments
+    - node.type.standard_page
+  module:
+    - file
+id: node.standard_page.field_attachments
+field_name: field_attachments
+entity_type: node
+bundle: standard_page
+label: Attachments
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt ppt pptx pdf doc docx'
+  max_filesize: '10 MB'
+  description_field: true
+field_type: file

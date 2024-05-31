@@ -1,0 +1,15 @@
+uuid: b0063667-de00-442d-af5d-b8efbbe3b109
+langcode: en
+status: true
+dependencies: {  }
+name: xlarge_4096_x_2160_4k
+label: 'xlarge (2160 x 4096) = 4K'
+effects:
+  1052fd69-51eb-4db3-a55f-65d6f537f50a:
+    uuid: 1052fd69-51eb-4db3-a55f-65d6f537f50a
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 4096
+      height: 2160
+      anchor: center-center

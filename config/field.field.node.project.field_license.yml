@@ -1,0 +1,21 @@
+uuid: 3624861c-292e-4dd9-a1de-3a439fc35b3c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_license
+    - node.type.project
+  module:
+    - options
+id: node.project.field_license
+field_name: field_license
+entity_type: node
+bundle: project
+label: License
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

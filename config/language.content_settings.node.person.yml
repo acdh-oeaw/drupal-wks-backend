@@ -1,0 +1,16 @@
+uuid: b63d0c5a-bbf3-4010-bc55-c96e709f13c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.person
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.person
+target_entity_type_id: node
+target_bundle: person
+default_langcode: und
+language_alterable: true

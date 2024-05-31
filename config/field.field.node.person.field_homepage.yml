@@ -1,0 +1,23 @@
+uuid: be475cff-0755-47e3-9a4a-6b374fd76814
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_homepage
+    - node.type.person
+  module:
+    - link
+id: node.person.field_homepage
+field_name: field_homepage
+entity_type: node
+bundle: person
+label: Homepage
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 2
+  link_type: 17
+field_type: link

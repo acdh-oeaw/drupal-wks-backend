@@ -1,0 +1,28 @@
+uuid: 735afa3f-bbe2-4997-8362-cb24a8f1b0f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_icon
+    - node.type.standard_page
+    - taxonomy.vocabulary.tags
+id: node.standard_page.field_icon
+field_name: field_icon
+entity_type: node
+bundle: standard_page
+label: Icon
+description: 'Icon for pages Menu entry and Header Illustration'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tags: tags
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

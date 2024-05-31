@@ -1,0 +1,27 @@
+uuid: 37039f00-5c5e-4335-812a-42d77e0829df
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_parentorganization
+    - node.type.institution
+id: node.institution.field_parentorganization
+field_name: field_parentorganization
+entity_type: node
+bundle: institution
+label: parentOrganization
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      institution: institution
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,13 +1,13 @@
-uuid: c6f9bc72-256c-4b7f-b4dc-c6c1c2c5e911
+uuid: a7160d95-7e38-4927-a421-691d1296e5eb
 langcode: en
 status: true
 dependencies:
   module:
     - user
 _core:
-  default_config_hash: nCa1oy25w2fh-nk_iQ7IJFQwQIcKxrV_5EQW2y8dzPc
+  default_config_hash: o_8fSWHZOVIbydZACGsSX09DtuJhqkRmNOzcVj-4bQI
 id: who_s_new
-label: "Who's new"
+label: 'Who''s new'
 module: user
 description: 'Shows a list of the newest user accounts on the site.'
 tag: default
@@ -20,7 +20,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: "Who's new"
+      title: 'Who''s new'
       fields:
         name:
           id: name
@@ -143,6 +143,9 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -180,13 +183,13 @@ display:
       tags: {  }
   block_1:
     id: block_1
-    display_title: "Who's new"
+    display_title: 'Who''s new'
     display_plugin: block
     position: 1
     display_options:
       display_description: 'A list of new users'
       display_extenders: {  }
-      block_description: "Who's new"
+      block_description: 'Who''s new'
       block_category: User
     cache_metadata:
       max-age: -1

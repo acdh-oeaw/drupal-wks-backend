@@ -1,0 +1,8 @@
+uuid: a422417f-758c-420c-b740-c3c03060c6b4
+langcode: en
+status: true
+dependencies: {  }
+name: menu
+vid: menu
+description: 'site structure'
+weight: 0

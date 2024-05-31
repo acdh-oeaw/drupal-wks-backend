@@ -1,0 +1,59 @@
+uuid: 091b0d0c-6cd7-444d-8d01-98bfba652651
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.institution.body
+    - field.field.node.institution.field_adress
+    - field.field.node.institution.field_cover_image
+    - field.field.node.institution.field_email
+    - field.field.node.institution.field_homepage
+    - field.field.node.institution.field_logo
+    - field.field.node.institution.field_name
+    - field.field.node.institution.field_parentorganization
+    - field.field.node.institution.field_telephone
+    - node.type.institution
+  module:
+    - image
+    - text
+    - user
+id: node.institution.teaser
+targetEntityType: node
+bundle: institution
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_cover_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_adress: true
+  field_email: true
+  field_homepage: true
+  field_logo: true
+  field_name: true
+  field_parentorganization: true
+  field_telephone: true
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,15 @@
+uuid: a6057678-94a6-447f-9e05-29c77ca7dc5c
+langcode: en
+status: true
+dependencies: {  }
+name: teaser_220_x_220_
+label: 'Teaser (500 x 500)'
+effects:
+  31f6ce5b-3cad-4a04-b582-6d62caa9d379:
+    uuid: 31f6ce5b-3cad-4a04-b582-6d62caa9d379
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 500
+      height: 500
+      anchor: center-center

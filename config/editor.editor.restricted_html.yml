@@ -1,4 +1,4 @@
-uuid: 46ece3d0-7f4b-4e32-a82c-ab4a5b3f547d
+uuid: 0728dd80-0c0a-4557-becf-6aaed11370d5
 langcode: en
 status: true
 dependencies:
@@ -29,9 +29,6 @@ settings:
         - heading4
         - heading5
         - heading6
-    ckeditor5_list:
-      reversed: false
-      startIndex: true
     ckeditor5_sourceEditing:
       allowed_tags:
         - '<cite>'
@@ -47,4 +44,7 @@ settings:
         - '<h4 id>'
         - '<h5 id>'
         - '<h6 id>'
+    ckeditor5_list:
+      reversed: false
+      startIndex: true
 image_upload: {  }

@@ -1,0 +1,23 @@
+uuid: a12dcbeb-346f-4558-9605-8d1eddcf39cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.institution
+  module:
+    - text
+id: node.institution.body
+field_name: body
+entity_type: node
+bundle: institution
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

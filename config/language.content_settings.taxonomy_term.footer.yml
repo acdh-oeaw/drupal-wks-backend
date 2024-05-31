@@ -1,0 +1,16 @@
+uuid: 8bda5858-91eb-46c1-bf21-5f529c1cccc7
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.footer
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.footer
+target_entity_type_id: taxonomy_term
+target_bundle: footer
+default_langcode: site_default
+language_alterable: false

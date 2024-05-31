@@ -1,4 +1,4 @@
-uuid: af61a0e6-04e7-4e6e-9d4a-2f77224942c1
+uuid: db194455-3137-4ac7-a618-05a1c3f62817
 langcode: en
 status: true
 dependencies:
@@ -8,11 +8,9 @@ dependencies:
     - content_translation
 third_party_settings:
   content_translation:
-    enabled: true
-_core:
-  default_config_hash: 3Lw85WiS5-LM4WyfNIZMtBlxjvk9cgR6hhTIbat-kJQ
+    enabled: false
 id: block_content.basic
 target_entity_type_id: block_content
 target_bundle: basic
 default_langcode: site_default
-language_alterable: true
+language_alterable: false
