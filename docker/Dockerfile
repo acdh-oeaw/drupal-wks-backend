@@ -39,7 +39,8 @@ RUN rm -f /etc/localtime && \
 RUN a2enmod rewrite && \
     sed -i -e 's/StartServers.*/StartServers 1/g' /etc/apache2/mods-enabled/mpm_prefork.conf && \
     sed -i -e 's/MinSpareServers.*/MinSpareServers 1/g' /etc/apache2/mods-enabled/mpm_prefork.conf && \
-    sed -i -e 's/upload_max_filesize.*/upload_max_filesize = 64M/' -e 's/post_max_size.*/post_max_size = 64M/' /etc/php/*/apache2/php.ini
+    sed -i -e 's/upload_max_filesize.*/upload_max_filesize = 64M/' -e 's/post_max_size.*/post_max_size = 64M/' /etc/php/*/apache2/php.ini && \
+    sed -i -e 's/Listen 80/Listen 5000/g' /etc/apache2/ports.conf
 
 # get and install composer
 RUN curl -sS https://getcomposer.org/installer -o composer-setup.php && \
@@ -86,7 +87,7 @@ COPY ./docker/drupal_settings.php /var/www/drupal/root/drupal_settings.php
 # intialize apache configuration
 COPY ./docker/apache2.conf /etc/apache2/sites-enabled/000-default.conf
 
-CMD ["/var/www/drupal/root/start.sh"]
-
 EXPOSE 5000
+
+CMD ["/var/www/drupal/root/start.sh"]
 
