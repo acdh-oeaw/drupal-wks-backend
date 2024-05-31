@@ -1,13 +1,17 @@
+/**
+ * adding the hash_salt
+ */
+$settings['hash_salt'] = 'DRUPALHASH';
 
 /**
- * new sync directory
+ * define sync directory
  */
 $settings['config_sync_directory'] = '/var/www/drupal/config';
 
 /**
  * database settings
  */
-/*$databases['default']['default'] = array (
+$databases['default']['default'] = array (
   'database' => 'DBNAME',
   'username' => 'DBUSER',
   'password' => 'DBPSWD',
@@ -19,5 +23,4 @@ $settings['config_sync_directory'] = '/var/www/drupal/config';
   'init_commands' => [
     'isolation_level' => 'SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED',
   ],
-);*/
-
+);
