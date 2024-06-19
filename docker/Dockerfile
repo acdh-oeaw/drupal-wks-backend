@@ -76,6 +76,7 @@ COPY ./custom/themes/ /var/www/drupal/html/web/themes/custom/
 
 # install from the existing composer.json and set permissions to www-data user
 RUN cd /var/www/drupal/html \
+#    && chown -R www-data:www-data /var/www/drupal/composer/composer.json \
     && ln -s /var/www/drupal/composer/composer.json composer.json \
     && composer install
 #    && chown -R www-data:www-data /var/www/drupal \
