@@ -1,4 +1,4 @@
-FROM ubuntu:focal
+FROM ubuntu:jammy
 MAINTAINER Klaus Illmayer <klaus.illmayer@oeaw.ac.at>
 
 ENV DEBIAN_FRONTEND=noninteractive PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/var/www/drupal/html/vendor/drush/drush/
@@ -26,8 +26,8 @@ RUN locale-gen en_US.UTF-8 && \
     locale-gen de_DE.UTF-8 && \
     apt-get update && \
     apt-get install -y curl git vim mysql-client unzip \
-                   apache2 libapache2-mod-php8.1 \
-                   php8.1-cli php8.1-curl php8.1-gd php8.1-mbstring php8.1-mysql php8.1-opcache php8.1-pgsql php8.1-sqlite3 php8.1-xml php8.1-yaml php8.1-zip && \
+                   apache2 libapache2-mod-php8.2 \
+                   php8.2-cli php8.2-curl php8.2-gd php8.2-mbstring php8.2-mysql php8.2-opcache php8.2-pgsql php8.2-sqlite3 php8.2-xml php8.2-yaml php8.2-zip && \
     apt-get clean
 
 # set time
