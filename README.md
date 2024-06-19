@@ -35,3 +35,8 @@ If you move an old Drupal:
 | `DBPSWD` | Secret | Database password - text |
 | `DRUPALHASH` | Secret | Drupal hash to identify website - text |
 
+# Import configuration
+Config is used to upgrade Drupal websites. Always run a `drush cex` on the development instance and push it, so that changes are synced with the production instance. Don't do changes in the production instance! The config-directory is outside the web-environment.
+
+For the basic instance, configs are not used, but the forks will use it. When merging the fork be aware that changes in config and custom may be overwritten (depending on the timeline). For the default-repo it is important, to leave the directories config and custom as they are, otherwise there may be problems when merging changes from drupal-default to the forks.
+
