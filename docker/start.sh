@@ -14,9 +14,12 @@ else
     -e "s/DBPSWD/$DBPSWD/g" \
     -e "s/DBPREFIX/$DBPREFIX/g" \
     -e "s/DBHOST/$DBHOST/g" \
-    -e "s/DBPORT/$DBPORT/g"
+    -e "s/DBPORT/$DBPORT/g" \
+    -e "s/DRUPALHASH/$DRUPALHASH/g" \
+    -e "s/DRUPALTRUSTEDHOST/$DRUPALTRUSTEDHOST/g"
   # sudo cat /var/www/drupal/root/drupal_settings.php >> /var/www/drupal/html/web/sites/default/settings.php
   sudo cat /var/www/drupal/root/drupal_settings.php >> /var/www/drupal/settings/settings.php
+  sudo chown 1000:1000 /var/www/drupal/settings/settings.php
   # chown 1000:1000 /var/www/drupal/html/web/sites/default/settings.php
   # mv /var/www/drupal/html/web/sites/default/settings.php /var/www/drupal/settings/settings.php
 fi

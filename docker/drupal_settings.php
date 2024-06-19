@@ -9,6 +9,13 @@ $settings['hash_salt'] = 'DRUPALHASH';
 $settings['config_sync_directory'] = '/var/www/drupal/config';
 
 /**
+ * set the trusted hosts
+ */
+$settings['trusted_host_patterns'] = [
+DRUPALTRUSTEDHOST
+];
+
+/**
  * database settings
  */
 $databases['default']['default'] = array (
