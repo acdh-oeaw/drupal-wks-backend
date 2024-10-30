@@ -28,7 +28,7 @@
 	"drupal/search_api": "^1.15",
 	"drupal/smtp": "^1.2",
 	"drupal/token": "^1.5",
-        "drush/drush": "^11.4"
+        "drush/drush": "^12.4"
     },
     "conflict": {
         "drupal/drupal": "*"
