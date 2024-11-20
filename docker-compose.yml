@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   drupal:
-    container_name: drupal-web-k8sdeploy
+    container_name: drupal-wks
     build:
       context: .
       dockerfile: docker/Dockerfile
@@ -16,8 +16,23 @@ services:
       DBPREFIX: ${DBPREFIX}
       DBHOST: ${DBHOST}
       DBPORT: ${DBPORT}
+      DRUPALHASH: ${DRUPALHASH}
+      DRUPALTRUSTEDHOST: ${DRUPALTRUSTEDHOST}
     volumes:
       - files:/var/www/drupal/html/web/sites/default/files/
-
+    depends_on:
+      - mariadb
+  mariadb:
+    image: mariadb:10.5
+    ports:
+      - "${DBPORT}:3306"
+    environment:
+      MARIADB_ROOT_PASSWORD: ${DBROOTPSWD}
+      MARIADB_DATABASE: ${DBNAME}
+      MARIADB_USER: ${DBUSER}
+      MARIADB_PASSWORD: ${DBPSWD}
+    volumes:
+      - mariadbdata:/var/lib/mysql
 volumes:
   files:
+  mariadbdata:
