@@ -1,5 +1,5 @@
 FROM ubuntu:jammy
-MAINTAINER Klaus Illmayer <klaus.illmayer@oeaw.ac.at>
+LABEL org.opencontainers.image.authors="Klaus Illmayer <klaus.illmayer@oeaw.ac.at>"
 
 ENV DEBIAN_FRONTEND=noninteractive PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/var/www/drupal/html/vendor/drush/drush/
 
