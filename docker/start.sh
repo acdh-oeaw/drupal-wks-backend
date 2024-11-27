@@ -54,6 +54,7 @@ fi
 # chown -R www-data:www-data /var/www/drupal/html/web/sites/default/
 # sudo chown -R 1000:1000 /var/www/drupal/
 
-sudo apache2ctl -D FOREGROUND
+# sudo apache2ctl -D FOREGROUND
+apache2ctl -D FOREGROUND
 
 #source /etc/apache2/envvars && exec /usr/sbin/apache2 -D FOREGROUND
