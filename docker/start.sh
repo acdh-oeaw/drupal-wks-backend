@@ -23,8 +23,9 @@ else
   #  -e "s|DRUPALTRUSTEDHOST|$DRUPALTRUSTEDHOST/g"
   # sudo cat /var/www/drupal/root/drupal_settings.php >> /var/www/drupal/html/web/sites/default/settings.php
   # that was sudo
-  sed -i /var/www/drupal/root/drupal_settings.php \
-    -e "s|DRUPALTRUSTEDHOST|${DRUPALTRUSTEDHOST:-}|g"
+  # temporary deactivate trustedhost
+  # sed -i /var/www/drupal/root/drupal_settings.php \
+  #   -e "s|DRUPALTRUSTEDHOST|${DRUPALTRUSTEDHOST:-}|g"
   # that was sudo
   cat /var/www/drupal/root/drupal_settings.php >> /var/www/drupal/settings/settings.php
   # sudo chown 1000:1000 /var/www/drupal/settings/settings.php
